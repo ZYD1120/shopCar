@@ -1,0 +1,22 @@
+<div class="list" ng-repeat="x in arr">
+            <span>
+                <a href="#" style="background: {{x.color}}" ng-click="odd($index)"></a>
+            </span>
+    <dl>
+        <dt><img ng-src="{{x.src}}"></dt>
+        <dd>
+            <p>{{x.content}}</p>
+
+            <p>￥{{x.money}}</p>
+
+            <p>
+                <button ng-click="add('-',x.id)">-</button>
+                <span>{{x.num}}</span>
+                <button ng-click="add('+',x.id)">+</button>
+            </p>
+        </dd>
+    </dl>
+        <span>
+            <a href="javascript:;" ng-click="close(x.id)">x</a>
+        </span>
+</div>

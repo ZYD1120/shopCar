@@ -1,0 +1,21 @@
+<div class="box" ng-controller="shoppingCar">
+    <header>
+        购物车
+    </header>
+    <section>
+        <div class="content">
+            <shooping></shooping>
+        </div>
+    </section>
+    <footer>
+        <span>
+           <a href="#" ng-click="all()" ng-class="{true:'y',false:'w'}[is]"></a>&nbsp;&nbsp;全选
+        </span>
+        <span>
+            合计: {{money}}
+        </span>
+        <span>
+            结算:{{num}}
+        </span>
+    </footer>
+</div>

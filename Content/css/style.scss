@@ -1,0 +1,158 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .box {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li, ol li {
+  list-style: none;
+}
+
+%qjz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-size: .32rem;
+}
+section {
+  position: relative;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+header{
+  @extend %qjz;
+  width: 100%;
+  height: .88rem;
+  background: #000;
+  color: #fff;
+}
+
+.content {
+  width: 100%;
+}
+
+.list {
+  padding: .2rem 0;
+  width: 100%;
+  display: flex;
+  span {
+    &:nth-child(1) {
+      @extend %qjz;
+      flex-basis: 15%;
+      a {
+        width: .5rem;
+        height: .5rem;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+      }
+    }
+    &:nth-child(3) {
+      flex-basis: 10%;
+      a{
+        margin-top: .2rem;
+        text-align: center;
+        line-height: .5rem;
+        background: #000000;
+        color: #FFF;
+        width: .5rem;
+        height: .5rem;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+  dl {
+    display: flex;
+    flex-basis: 90%;
+    dt {
+      @extend %qjz;
+      flex-basis: 30%;
+      img {
+        width: 90%;
+        height: auto;
+      }
+    }
+    dd {
+      margin-top: .2rem;
+      p {
+        &:nth-child(2) {
+          margin-top: .1rem;
+        }
+        &:nth-child(3) {
+          margin-left: 2rem;
+          display: flex;
+          span {
+            @extend %qjz;
+            width: .5rem;
+            height: .45rem;
+            border: 1px solid #ccc;
+          }
+          button{
+            @extend %qjz;
+            width: .5rem;
+            height: .5rem;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  width: 100%;
+  height: .88rem;
+  background: #000;
+  color: #fff;
+  display: flex;
+  span{
+    @extend  %qjz;
+    &:nth-child(1){
+      margin-left: -.1rem;
+      flex-basis: 30%;
+      a{
+        width: .5rem;
+        height: .5rem;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+      }
+    }
+    &:nth-child(2){
+      flex-basis: 40%;
+
+    }
+    &:nth-child(3){
+      flex-basis: 30%;
+    }
+  }
+}
+
+.y{
+  background: pink;
+}
+.w{
+  background: #fff;
+}
